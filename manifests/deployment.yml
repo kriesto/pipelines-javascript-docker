@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kriestopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kriestopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: kriestopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kriestopipelinesjavascriptdocker 
+          image: acrdemo013.azurecr.io/kriestopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
